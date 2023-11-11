@@ -12,9 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- leaflet css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <!-- leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
 
     <!-- <link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
@@ -36,21 +51,33 @@
   </head>
   <body>
     <div id="page-orphanages">
-      <aside>
+      <aside class="animate-right">
         <header>
-          <img
+          <a href="index.html" title="Happy logo">
+            <img
             src="./images/logo-small.svg"
             alt="Happy | Localizando um orfanato"
-          />
-          <p>Escolha um orfanato no mapa</p>
-          <span>Muitas crianças estão esperando a sua visita :)</span>
-          <div class="location animate-up">
-            <strong>Porto Alegre</strong>
-            <p>Rio Grande do Sul</p>
-          </div>
+            />
+          </a>
+          <h2>Escolha um orfanato no mapa</h2>
+          <p>Muitas crianças estão esperando a sua visita :)</p>
         </header>
+        <footer>
+          <strong>Porto Alegre</strong>
+          <p>Rio Grande do Sul</p>
+        </footer>
       </aside>
-      <div id="mapid"></div>
+      <div id="mapid" class="animate-appear"></div>
+      <a
+        href="create-orphanage.html"
+        class="create-orphanage animate-up"
+        title="Cadastre um orfanato"
+      >
+        <img src="./images/plus-sign.svg" alt="Criar orfanato" />
+      </a>
     </div>
+
+    <script src="./js/page-orphanages.js"></script>
+
   </body>
 </html>
