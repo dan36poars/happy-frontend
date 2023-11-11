@@ -1,20 +1,22 @@
 /* main page Happy */
 * {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: 0; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 :root {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    height: 100vh;
-    color: white;   
+  height: 100vh;
+  color: white;
 }
 
-body, button, input, textarea {
-    font: 400 1.8rem/1 'Nunito', sans-serif;
+body,
+button,
+input,
+textarea {
+  font: 400 1.8rem/1 "Nunito", sans-serif;
 }
