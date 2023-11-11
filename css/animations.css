@@ -40,7 +40,7 @@
     animation-duration: .3s;    
 }
 
-.animate-apper {
+.animate-appear {
     animation-name: appear;
     animation-duration: .3s;
     animation-fill-mode: backwards;

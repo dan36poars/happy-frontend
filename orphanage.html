@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy | Pão dos pobres</title>
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/page-orphanage.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- leaflet css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <!-- leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="./images/favicons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="./images/favicons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="./images/favicons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+      <link rel="manifest" href="./images/favicons/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="./images/favicons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff"> -->
+  </head>
+  <body>
+    <div id="page-orphanage">
+      <aside class="animate-right sidebar">
+          
+        <img src="./images/logo-small.svg" alt="Happy">
+
+        <footer>
+          <button onclick="history.back()">
+            <img src="./images/arrow-white.svg" alt="Voltar">
+          </button>
+        </footer>
+
+      </aside>
+
+      <main class="animate-appear with-sidebar">
+        <div class="orphanage-details">
+          <img src="./images/image-header-2.jpg" alt="lar das meninas" />
+          <div class="images">
+            <button class="active" type="button">
+              <img src="./images/image-header-2.jpg" alt="lar das meninas" />
+            </button>
+            <button type="button">
+              <img src="./images/image-header.jpg" alt="lar das meninas" />
+            </button>
+            <button type="button">
+              <img src="./images/image-header.jpg" alt="lar das meninas" />
+            </button>
+            <button type="button">
+              <img src="./images/image-header.jpg" alt="lar das meninas" />
+            </button>
+            <button type="button">
+              <img src="./images/image-header.jpg" alt="lar das meninas" />
+            </button>
+            <button type="button">
+              <img src="./images/image-header.jpg" alt="lar das meninas" />
+            </button>
+          </div>
+
+          <div class="orphanage-details-content">
+            <h1>Lar das Meninas</h1>
+
+            <p>
+              Presta assistência a crianças de 06 a 15 anos que se encontre em
+              situação de risco e/ou vulnerabilidade social.
+            </p>
+
+            <div class="map-container">
+              <div id="mapid"></div>
+
+              <footer>
+                <a href="">Ver rotas no Google Maps</a>
+              </footer>
+            </div>
+
+            <hr />
+
+            <h2>Instruções para visita</h2>
+
+            <p>
+              Venha como se sentir a vontade e traga muito amor e paciência para
+              dar.
+            </p>
+
+            <div class="open-details">
+              <div class="hour">
+                <img src="./images/clock.svg" alt="horários" />
+                Horário de visitas Das 18h até 8h
+              </div>
+              <div class="open-on-weekends">
+                <img src="./images/info.svg" alt="Informações" />
+                Atendemos fim de semana
+              </div>
+            </div>
+
+            <button class="primary-button" type="button">
+              <img src="./images/whatsapp.svg" alt="Chamar no Whatsapp" />
+              Entrar em contato
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/page-orphanage.js"></script>
+  </body>
+</html>
