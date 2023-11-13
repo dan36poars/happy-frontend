@@ -7,7 +7,7 @@ aside.sidebar {
   position: fixed;
   height: 100%;
   padding: 3.2rem 2.4rem;
-  background: #15C3D6;
+  background: #15c3d6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,18 +19,22 @@ aside.sidebar footer button {
   height: 4.8rem;
   border: none;
   border-radius: 1.6rem;
-  background-color: #12AFCB;
+  background-color: #12afcb;
   cursor: pointer;
 
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 aside.sidebar footer button:hover {
-  background-color: #17D6EB;
+  background-color: #17d6eb;
 }
 
 aside.sidebar footer button img {
   transform: scaleX(-1); /* invert image */
+}
+
+main {
+  flex: 1;
 }
 
 /* content detail */
@@ -38,7 +42,7 @@ aside.sidebar footer button img {
   width: 70.8rem;
   margin: 10.8rem auto;
   background-color: white;
-  border: 1px solid #E3E2E5;
+  border: 1px solid #e3e2e5;
   border-radius: 2rem;
   overflow: hidden;
 }
@@ -63,8 +67,8 @@ aside.sidebar footer button img {
   cursor: pointer;
   border-radius: 2rem;
   overflow: hidden;
-  opacity: .6;
-  transition: opacity .2s ease-in-out;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .images button:hover,
@@ -83,7 +87,7 @@ aside.sidebar footer button img {
 }
 
 .orphanage-details-content h1 {
-  color: #4D6F80;
+  color: #4d6f80;
   font-weight: 700;
   font-size: 5.4rem;
   line-height: 1;
@@ -91,7 +95,7 @@ aside.sidebar footer button img {
 }
 
 .orphanage-details-content p {
-  color: #5C8599;
+  color: #5c8599;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 2.8rem;
@@ -101,8 +105,8 @@ aside.sidebar footer button img {
 /* map */
 .map-container {
   margin-top: 6.4rem;
-  background: #E6F7FB;
-  border: 1px solid #DDE3F0;
+  background: #e6f7fb;
+  border: 1px solid #dde3f0;
   border-radius: 2rem;
 }
 
@@ -117,14 +121,100 @@ aside.sidebar footer button img {
 }
 
 .map-container footer a {
-  color: #0089A5;
+  color: #0089a5;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1;
 }
 
+.map-container .leaflet-container {
+  border: 1px solid #dde3f0;
+  border-radius: 2rem;
+}
 
 .with-sidebar {
-  padding-left: 11.0rem;
+  padding-left: 11rem;
+}
+.orphanage-details-content h2 {
+  color: #4d6f80;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2.4rem;
+}
+
+.orphanage-details-content hr {
+  width: 100%;
+  height: 0.1rem;
+  border: 0;
+  background-color: #d3e2e5;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.open-details {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 6.4rem;
+}
+
+.open-details div {
+  padding: 3.2rem 2.4rem;
+  width: 26.4rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 17.6rem;
+}
+
+.open-details div img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.open-details .hour {
+  background: linear-gradient(150deg, #e6f7fb 8.13%, #fff 92.67%);
+  border: 1px solid #b3dae2;
+  color: #5C8599;
+  font-weight: 600;  
+}
+
+.open-details .open-on-weekends {
+  background: linear-gradient(154deg, #edfff6 7.85%, #fff 91.03%);
+  border: 1px solid #a1e9c5;
+  color: #37C77F;
+  font-weight: 600;
+}
+
+.primary-button {
+  width: 100%;
+  height: 6.4rem;
+  border: 0;
+  border-radius: 2rem;
+  background: #3CDC8C;
+  cursor: pointer;
+  color: white;
+  font-size: 'Nunito', sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s ease-in-out;
+}
+
+.primary-button:hover {
+  background-color: #36CF82;
+}
+
+.primary-button img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.6rem;
 }
