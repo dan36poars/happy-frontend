@@ -1,0 +1,25 @@
+#create-orphanage {
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.map-container {
+    margin: 0 0 4rem;
+    border: 1px solid #DDE3F0;
+}
+
+.map-container .leafleat-container {
+    border-radius: 2rem 2rem 0 0;
+}
+
+.map-container footer {
+    background-color: #F5F8FA;
+    border-radius: 0 0 2rem 2rem;
+}
+
+
+

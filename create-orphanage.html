@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy | Pão dos pobres</title>
+    <title>Happy | Adicionar um orfanato</title>
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/sidebar.css" />
-    <link rel="stylesheet" href="./css/buttons.css"/>
-    <link rel="stylesheet" href="./css/map.css" />
-    <link rel="stylesheet" href="./css/page-orphanage.css" />
     <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/map.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/create-orphanage.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,7 +54,7 @@
       <meta name="theme-color" content="#ffffff"> -->
   </head>
   <body>
-    <div id="page-orphanage">
+    <div id="create-orphanage">
       <aside class="animate-right sidebar">
         <a href="./index.html">
           <img src="./images/logo-small.svg" alt="Happy" />
@@ -67,86 +68,93 @@
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <div class="orphanage-details">
-          <img src="./images/image-header-2.jpg" alt="lar das meninas" />
-          <div class="images">
-            <button onclick="selectImage(event)" class="active" type="button">
-              <img src="./images/image-header-2.jpg" alt="lar das meninas" />
-            </button>
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=1"
-                alt="lar das meninas"
-              />
-            </button>
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=2"
-                alt="lar das meninas"
-              />
-            </button>
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=3"
-                alt="lar das meninas"
-              />
-            </button>
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="https://source.unsplash.com/random?id=4"
-                alt="lar das meninas"
-              />
-            </button>
-            <button onclick="selectImage(event)" type="button">
-              <img src="./images/image-header.jpg" alt="lar das meninas" />
-            </button>
-          </div>
-
-          <div class="orphanage-details-content">
-            <h1>Lar das Meninas</h1>
-
-            <p>
-              Presta assistência a crianças de 06 a 15 anos que se encontre em
-              situação de risco e/ou vulnerabilidade social.
-            </p>
+        <form action="">
+          <fieldset>
+            <legend>Dados</legend>
 
             <div class="map-container">
               <div id="mapid"></div>
-
+              <input type="hidden" name="lat">
+              <input type="hidden" name="lng">
               <footer>
-                <a href="">Ver rotas no Google Maps</a>
+                <a href="#" id="select-point" required>
+                  Clique no no mapa para adicionar a localicazão
+                </a>
               </footer>
             </div>
 
-            <hr />
-
-            <h2>Instruções para visita</h2>
-
-            <p>
-              Venha como se sentir a vontade e traga muito amor e paciência para
-              dar.
-            </p>
-
-            <div class="open-details">
-              <div class="hour">
-                <img src="./images/clock.svg" alt="horários" />
-                Horário de visitas Das 18h até 8h
-              </div>
-              <div class="open-on-weekends">
-                <img src="./images/info.svg" alt="Informações" />
-                Atendemos fim de semana
-              </div>
+            <div class="input-block">
+              <label for="name">Nome</label>
+              <input id="name" type="text" name="name" required />
             </div>
 
-            <button class="primary-button" type="button">
-              <img src="./images/whatsapp.svg" alt="Chamar no Whatsapp" />
-              Entrar em contato
-            </button>
-          </div>
-        </div>
+            <div class="input-block">
+              <label for="about"
+                >Sobre
+                <span>Máximo de 300 catacteres</span>
+              </label>
+              <textarea id="about" name="about" required></textarea>
+            </div>
+
+            <div class="input-block">
+              <label for="whatsapp">Número de Whatsapp</label>
+              <input id="whatsapp" name="whatsapp" required />
+            </div>
+
+            <div class="input-block images">
+              <label for="images">Foto</label>
+
+              <div class="images-upload" id="images">
+                <div class="new-upload">
+                  <input name="images" placeholder="cole o link da foto aqui" required />
+                  <span onclick="deleteField(event)"
+                    ><img
+                      src="./images/small-x-icon-red.png"
+                      alt="remover foto"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <button onclick="addPhotoField()" type="button">
+                <img
+                  src="./images/plus-sign-images-add.svg"
+                  alt="adicione uma images"
+                />
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Visitação</legend>
+            <div class="input-block">
+              <label for="instructions">Instruções </label>
+              <textarea id="instructions" name="instructions" required></textarea>
+            </div>
+            <div class="input-block">
+              <label for="openings-hours">Horário das visitas</label>
+              <input id="openings-hours" name="openings-hours" required />
+            </div>
+            <div class="input-block">
+              <label for="open-on-weekends">Atende fim de semana?</label>
+              <input
+                type="hidden"
+                name="open-on-weekends"
+                id="open-on-weekends"
+                value="1"
+                required
+              />
+              <div class="button-select">
+                <button data-value="1" onclick="toggleSelect(event)" type="button" class="active">Sim</button>
+                <button data-value="0" onclick="toggleSelect(event)" type="button">Não</button>
+              </div>
+              <button type="submit" class="primary-button">Confirmar</button>
+            </div>
+          </fieldset>
+        </form>
       </main>
     </div>
 
-    <script src="./js/page-orphanage.js"></script>
+    <script src="./js/create-orphanage.js"></script>
   </body>
 </html>

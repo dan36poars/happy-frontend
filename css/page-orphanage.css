@@ -3,36 +3,6 @@
   min-height: 100vh;
 }
 
-aside.sidebar {
-  position: fixed;
-  height: 100%;
-  padding: 3.2rem 2.4rem;
-  background: #15c3d6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-aside.sidebar footer button {
-  width: 4.8rem;
-  height: 4.8rem;
-  border: none;
-  border-radius: 1.6rem;
-  background-color: #12afcb;
-  cursor: pointer;
-
-  transition: background-color 0.2s ease-in-out;
-}
-
-aside.sidebar footer button:hover {
-  background-color: #17d6eb;
-}
-
-aside.sidebar footer button img {
-  transform: scaleX(-1); /* invert image */
-}
-
 main {
   flex: 1;
 }
@@ -102,40 +72,6 @@ main {
   margin-bottom: 6.4rem;
 }
 
-/* map */
-.map-container {
-  margin-top: 6.4rem;
-  background: #e6f7fb;
-  border: 1px solid #dde3f0;
-  border-radius: 2rem;
-}
-
-#mapid {
-  width: 100%;
-  height: clamp(28rem, 5vh, 35rem);
-}
-
-.map-container footer {
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.map-container footer a {
-  color: #0089a5;
-  text-decoration: none;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.map-container .leaflet-container {
-  border: 1px solid #dde3f0;
-  border-radius: 2rem;
-}
-
-.with-sidebar {
-  padding-left: 11rem;
-}
 .orphanage-details-content h2 {
   color: #4d6f80;
   font-size: 3.6rem;
@@ -158,7 +94,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-bottom: 6.4rem;
 }
 
@@ -181,40 +117,13 @@ main {
 .open-details .hour {
   background: linear-gradient(150deg, #e6f7fb 8.13%, #fff 92.67%);
   border: 1px solid #b3dae2;
-  color: #5C8599;
-  font-weight: 600;  
+  color: #5c8599;
+  font-weight: 600;
 }
 
 .open-details .open-on-weekends {
   background: linear-gradient(154deg, #edfff6 7.85%, #fff 91.03%);
   border: 1px solid #a1e9c5;
-  color: #37C77F;
+  color: #37c77f;
   font-weight: 600;
-}
-
-.primary-button {
-  width: 100%;
-  height: 6.4rem;
-  border: 0;
-  border-radius: 2rem;
-  background: #3CDC8C;
-  cursor: pointer;
-  color: white;
-  font-size: 'Nunito', sans-serif;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color .2s ease-in-out;
-}
-
-.primary-button:hover {
-  background-color: #36CF82;
-}
-
-.primary-button img {
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1.6rem;
 }
