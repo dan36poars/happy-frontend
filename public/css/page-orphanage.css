@@ -107,6 +107,7 @@ main {
   align-items: start;
   justify-content: space-between;
   height: 17.6rem;
+  line-height: 1.5;
 }
 
 .open-details div img {
@@ -119,11 +120,24 @@ main {
   border: 1px solid #b3dae2;
   color: #5c8599;
   font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .open-details .open-on-weekends {
+  font-weight: 600;
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.open-on-weekends.open {
   background: linear-gradient(154deg, #edfff6 7.85%, #fff 91.03%);
   border: 1px solid #a1e9c5;
-  color: #37c77f;
-  font-weight: 600;
+  color: #37c77f;  
+}
+
+.open-on-weekends.closed {
+  background: linear-gradient(154deg, #FCF0F4 7.85%, #FFF 91.03%);
+  border: 1px solid #FFBCD4;
+  color: #FF669D;
 }
