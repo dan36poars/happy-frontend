@@ -17,7 +17,7 @@ module.exports = [
   },
   {
     id: 2,
-    name: " Lar Esperança",
+    name: "Lar Esperança",
     lat: "-30.031966",
     lng: "-51.207669",
     description:
