@@ -9,8 +9,8 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 const icon = L.icon({
   iconUrl: "./images/map-mark.svg",
   iconSize: [40, 40],
-  iconAnchor: [0, 0],
-  popupAnchor: [192, 65],
+  iconAnchor: [29, 38],
+  popupAnchor: [160, 30],
 });
 
 // created popup overlay
