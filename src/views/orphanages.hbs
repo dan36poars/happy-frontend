@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy</title>
+    <title>Happy | Localize um orfanato</title>
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/page-landing.css" />
+    <link rel="stylesheet" href="./css/page-orphanages.css" />
     <link rel="stylesheet" href="./css/animations.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +14,21 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- leaflet css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <!-- leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
 
     <!-- <link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
@@ -35,38 +49,46 @@
       <meta name="theme-color" content="#ffffff"> -->
   </head>
   <body>
-    <div id="page-landing">
-      <div id="container">
+    <div id="page-orphanages">
+      <aside class="animate-right">
         <header>
-          <a href="index.html" title="Happy logo">
+          <a href="./" title="Happy logo">
             <img
-            id="logo"
-            class="animate-up"
-            src="./images/Logo-happy.svg"
-            alt="Logomarca de Happy"
+              src="./images/logo-small.svg"
+              alt="Happy | Localizando um orfanato"
             />
           </a>
-          <div class="location animate-up">
-            <strong>Porto Alegre</strong>
-            <p>Rio Grande do Sul</p>
-          </div>
+          <h2>Escolha um orfanato no mapa</h2>
+          <p>Muitas crianças estão esperando a sua visita :)</p>
         </header>
-        <main>
-          <h1 class="animate-up">Leve felicidade para o mundo</h1>
-          <section class="visit">
-            <p class="animate-up">
-              Visite orfanatos e mude o dia de muitas crianças
-            </p>
-            <a class="animate-up" href="orphanages.html" title="Visite orfanatos">
-              <img
-                id="image-arrow"
-                src="./images/Arrow.svg"
-                alt="Entre no Site"
-              />
-            </a>
-          </section>
-        </main>
+        <footer>
+          <strong>Porto Alegre</strong>
+          <p>Rio Grande do Sul</p>
+        </footer>
+      </aside>
+      <div id="mapid" class="animate-appear"></div>
+      <div class="data-orphanages">
+        {{#each orphanages}}
+          <span
+            hidden
+            data-id="{{this.id}}"
+            data-name="{{this.name}}"
+            data-lat="{{this.lat}}"
+            data-lng="{{this.lng}}"
+          >
+          </span>
+        {{/each}}
       </div>
+      <a
+        href="./create-orphanage"
+        class="create-orphanage animate-up"
+        title="Cadastre um orfanato"
+      >
+        <img src="./images/plus-sign.svg" alt="Criar orfanato" />
+      </a>
     </div>
+
+    <script src="./js/page-orphanages.js"></script>
+
   </body>
 </html>

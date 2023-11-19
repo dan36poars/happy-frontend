@@ -1,5 +1,6 @@
 // create map
 // coords = -30.031966,-51.197669
+
 const map = L.map("mapid").setView([-30.031966, -51.197669], 13);
 
 // tileLayer Map added
@@ -8,9 +9,9 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 // created icon
 const icon = L.icon({
   iconUrl: "./images/map-mark.svg",
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [170, 2],
+  iconSize: [40, 40],
+  iconAnchor: [29, 38],
+  popupAnchor: [160, 30],
 });
 
 // marker
@@ -80,9 +81,24 @@ function toggleSelect(event) {
   buttonClicked.classList.add("active");
 
   // update input hidden from open on weekends
-  const toggleValue = document.querySelector('[name="open-on-weekends"]');
+  const toggleValue = document.querySelector('[name="open_on_weekends"]');
   
   // get input and update dataset
   toggleValue.value = buttonClicked.dataset.value;
 
+}
+
+// validate map data: lat, lng
+function validate(event) {
+
+  const lat = document.querySelector('[name="lat"]').value;
+  const lng = document.querySelector('[name="lng"]').value;
+
+  if(lat == "" || lng == "") {
+    alert("Selecione um ponto no mapa");
+    event.preventDefault(); // stop send form
+  }
+
+  console.log(lat);
+  console.log(lng);
 }
